@@ -1,0 +1,7 @@
+This is a sample file used to test limited access privileges policy for demo1.
+
+Adding a new line
+
+I'm adding this to the feature branch
+
+Verifying master branch deny access

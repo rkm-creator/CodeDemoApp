@@ -1,0 +1,25 @@
+version: 0.2
+  
+phases:
+  install:
+    runtime-versions:
+      nodejs: 10
+    commands:
+      - echo "Installing pre-requisites..."
+  pre_build:
+    commands:
+      - printenv
+      - echo "This is the pre-build phase"
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Static website... copying files...
+      - echo "Running tests"
+      - grep -Fq "Congratulations" index.html
+  post_build:
+    commands:
+      - echo "Post build phase"
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - "**/*"
